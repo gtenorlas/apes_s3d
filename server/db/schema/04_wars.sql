@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS wars CASCADE;
 CREATE TABLE
   wars (
     id SERIAL PRIMARY KEY NOT NULL,
-    start_date DATETIME NOT NULL,
-    end_date DATETIME NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
     number_of_days INT NOT NULL,
     month INT NOT NULL,
     thumbnail VARCHAR(500),
