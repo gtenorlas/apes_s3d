@@ -31,4 +31,12 @@ VALUES
     'Guest',
     'Star',
     'female'
+  ),
+  (
+    5,
+    'bye@abc.com',
+    'abc',
+    'Bye',
+    'Bye',
+    'female'
   );

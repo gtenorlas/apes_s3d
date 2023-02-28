@@ -16,4 +16,5 @@ VALUES
     false
   ),
   (2, 1, 'Cardo', '434383234nsfnkenrkr43', false),
-  (3, 1, 'Guest933', '4343483234nsfnkenrkr43', true);
+  (3, 1, 'Guest933', '4343483234nsfnkenrkr43', true),
+  (4, 1, 'Bye', 'bye343483234nsfnkenrkr43', true);
