@@ -4,11 +4,11 @@
 
 const express = require("express");
 const app = express.Router();
-const userLevelDao = require('./userLevelDao'); // Import the module containing CRUD functions
+const userLevelDao = require('../db/dao/user_level'); // Import the module containing CRUD functions
 
 
 // Create a new user level
-app.post('/api/userlevels', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     const { name, description } = req.body;
     const newUserLevel = await userLevelDao.createUserLevel(name, description);
@@ -19,7 +19,7 @@ app.post('/api/userlevels', async (req, res) => {
 });
 
 // Retrieve all user levels
-app.get('/api/userlevels', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const userLevels = await userLevelDao.getAllUserLevels();
     res.json(userLevels);
@@ -29,7 +29,7 @@ app.get('/api/userlevels', async (req, res) => {
 });
 
 // Retrieve a specific user level by ID
-app.get('/api/userlevels/:id', async (req, res) => {
+app.get('/:id', async (req, res) => {
   try {
     const userLevelId = parseInt(req.params.id);
     const userLevel = await userLevelDao.getUserLevelById(userLevelId);
@@ -44,7 +44,7 @@ app.get('/api/userlevels/:id', async (req, res) => {
 });
 
 // Update a user level by ID
-app.put('/api/userlevels/:id', async (req, res) => {
+app.put('/:id', async (req, res) => {
   try {
     const userLevelId = parseInt(req.params.id);
     const { name, description } = req.body;
@@ -60,7 +60,7 @@ app.put('/api/userlevels/:id', async (req, res) => {
 });
 
 // Soft delete a user level by ID
-app.delete('/api/userlevels/:id', async (req, res) => {
+app.delete('/:id', async (req, res) => {
   try {
     const userLevelId = parseInt(req.params.id);
     const deletedUserLevel = await userLevelDao.deleteUserLevel(userLevelId);
