@@ -19,9 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const userlevelsRoutes = require('./routes/userlevels-api')
+const usersRoutes = require('./routes/users-api')
 
 //create endpoints
 app.use('/api/userlevels',userlevelsRoutes);
+app.use('/api/users',usersRoutes);
 
 app.listen(process.env.PORT || 8080,()=>{
   console.log("Server running");
