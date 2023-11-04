@@ -13,7 +13,10 @@ You'll also need the server and SQL data that is available within this same gith
 3. Install dependencies: `npm i`
 4. Create database finals using
   - `psql -U development`
-  - `create databaase s3d;`
+  - `create database s3d;`
+  - `c s3d;`
+  - FOR postgresql v15+ do the command below
+  - GRANT ALL ON SCHEMA public TO development;
 5. Reset database: `npm run db:reset`
   - Check the db folder to see what gets created and seeded in the SDB
 6. Create account in `screenshotapi.net` and get the `API KEY`
