@@ -4,7 +4,7 @@
 
 const express = require("express");
 const app = express.Router();
-const userDAO = require('../db/dao/user'); // Import the module containing CRUD functions
+const userDAO = require('../db/dao/userDAO'); // Import the module containing CRUD functions
 const bcrypt = require('bcrypt');
 
 

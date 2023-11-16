@@ -1,5 +1,5 @@
 const express = require('express');
-const ProfilesDAO = require('../dao/DAO'); // Path to your ProfilesDAO module
+const ProfilesDAO = require('../db/dao/profilesDAO'); // Path to your ProfilesDAO module
 const router = express.Router();
 
 // POST route to CREATE a new profile
