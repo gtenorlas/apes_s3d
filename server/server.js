@@ -24,6 +24,7 @@ const usersRoutes = require('./routes/users-api')
 const groupsRoutes = require('./routes/groups-api')
 const profilesRoutes = require('./routes/profiles-api');
 const warsRoutes = require('./routes/wars-api');
+const tournamentTypesRoutes = require('./routes/tournamentTypes-api');
 
 //create endpoints
 app.use('/api/userlevels', userlevelsRoutes)
@@ -31,6 +32,7 @@ app.use('/api/users', usersRoutes)
 app.use('/api/groups', groupsRoutes)
 app.use('/api/profiles',profilesRoutes)
 app.use('/api/wars',warsRoutes);
+app.use('api/tournamenttypes',tournamentTypesRoutes)
 
 app.listen(process.env.PORT || 8080, () => {
   console.log('Server running')
