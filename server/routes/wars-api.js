@@ -1,5 +1,5 @@
 const express = require('express');
-const WarsDAO = require('./DAO'); // Replace with the path to your WarsDAO module
+const WarsDAO = require('../db/dao/warsDAO'); // Replace with the path to your WarsDAO module
 const router = express.Router();
 
 // POST route to CREATE a new war entry
