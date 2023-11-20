@@ -1,6 +1,6 @@
 const express = require('express');
 
-const groupsDAO = require('/db/dao/groupsDAO'); // Import the module containing CRUD functions
+const groupsDAO = require('../db/dao/groupsDAO'); // Import the module containing CRUD functions
 
 const app = express();
 

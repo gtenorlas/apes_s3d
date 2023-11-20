@@ -1,5 +1,5 @@
 // Assuming we have a database module for connection
-const db = require('./connection');
+const db = require('../connection');
 
 const AccumulativeMatchesDAO = {
   // Create a new accumulative match

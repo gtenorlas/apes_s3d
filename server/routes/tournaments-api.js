@@ -1,5 +1,5 @@
 const express = require('express');
-const TournamentsDAO = require('../db/dao/DAO'); // Path to your TournamentsDAO module
+const TournamentsDAO = require('../db/dao/tournamentsDAO'); // Path to your TournamentsDAO module
 const router = express.Router();
 
 // POST route to CREATE a new tournament
