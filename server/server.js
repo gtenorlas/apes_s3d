@@ -29,6 +29,7 @@ const warsRoutes= require('./routes/wars-api');
 const tournamentsRoutes = require('./routes/tournaments-api');
 const playersRoutes = require('./routes/players-api');
 const matchesRoutes = require('./routes/matches-api');
+const accumulativeMatchRoutes = require('./routes/accumulativeMatch-api');
 
 //create endpoints
 app.use('/api/userlevels', userlevelsRoutes)
@@ -41,6 +42,7 @@ app.use('api/wars',warsRoutes);
 app.use('api/tournaments',tournamentsRoutes);
 app.use('api/players',playersRoutes);
 app.use('api/matches'matchesRoutes)
+app.use('api/accumuativematch',accumulativeMatchRoutes);
 
 app.listen(process.env.PORT || 8080, () => {
   console.log('Server running')
