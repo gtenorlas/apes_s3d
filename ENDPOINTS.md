@@ -57,20 +57,61 @@ returned:
 ]
 ```
 
-## POST api/extract
-description: retrieve title, description, thumbnail of a url
+## GET api/userlevels/{id}
+description: retrieve a single userlevel
+
+```json
+body: N/A
+
+returned:
+{
+    "id": 4,
+    "name": "Senior",
+    "description": "Trusted members",
+    "created_at": "2023-11-20T23:11:22.289Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## PUT api/userlevels/{id}
+description: update a single userlevel
 
 ```json
 body:
 {
-   "url": "https://www.youtube.com/watch?v=t_ispmWmdjY"
+    "name": "Senior",
+    "description": "Trusted and loyal members "
 }
 
 returned:
 {
-    "title": "Ruby Programming Language - Full Course - YouTube",
-    "description": "Learn the Ruby programming language in this full course / tutorial. The course is designed for new programmers, and will introduce common programming topics ...",
-    "thumbnail": "https://storage.screenshotapi.net/www_youtube_com_watch_v_t_ispmwmdjy_983a438ee7b2.png",
-    "url": "https://www.youtube.com/watch?v=t_ispmWmdjY"
+    "id": 4,
+    "name": "Senior",
+    "description": "Trusted and loyal members ",
+    "created_at": "2023-11-20T23:11:22.289Z",
+    "updated_at": "2023-11-20T23:40:25.540Z",
+    "deleted_at": null
+}
+```
+
+## POST api/userlevels
+description: create a single userlevel
+
+```json
+body:
+{
+    "name": "Recruit",
+    "description": "New member"
+}
+
+returned:
+{
+    "id": 7,
+    "name": "Recruit",
+    "description": "New member",
+    "created_at": "2023-11-20T23:43:36.913Z",
+    "updated_at": null,
+    "deleted_at": null
 }
 ```
