@@ -6,6 +6,7 @@ CREATE TABLE
     user_level_id INT NOT NULL REFERENCES user_levels(id) ON DELETE CASCADE,
     email VARCHAR(250) NOT NULL,
     password VARCHAR(250) NOT NULL,
+    preferred_alias VARCHAR(255) NOT NULL,
     first_name VARCHAR(250) NOT NULL,
     last_name VARCHAR(250) NOT NULL,
     gender VARCHAR(250) NOT NULL,

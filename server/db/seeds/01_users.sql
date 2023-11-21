@@ -3,6 +3,7 @@ INSERT INTO
     user_level_id,
     email,
     password,
+    preferred_alias,
     first_name,
     last_name,
     gender
@@ -13,6 +14,7 @@ VALUES
     'jack@nowhere.com',
     'abc',
     'Jack',
+    'Jack',
     'Mindster',
     'male'
   ),
@@ -20,6 +22,7 @@ VALUES
     5,
     'george@abc.com',
     'abc',
+    'MonkeyGeorge',
     'George',
     'Maul',
     'male'
@@ -28,6 +31,7 @@ VALUES
     6,
     'guest@abc.com',
     'abc',
+    'na',
     'Guest',
     'Star',
     'female'
@@ -36,6 +40,7 @@ VALUES
     5,
     'bye@abc.com',
     'abc',
+    'ByeStander',
     'Bye',
     'Bye',
     'female'
