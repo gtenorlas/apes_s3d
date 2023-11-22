@@ -12,7 +12,7 @@ VALUES
   (
     1,
     'jack@nowhere.com',
-    'abc',
+    '2b$10$5ITbTbijOMvh0tpWwtMSKupRDFr/Li672NGVEFxI1Bh35d3eFE8Jy',
     'Jack',
     'Jack',
     'Mindster',
@@ -21,7 +21,7 @@ VALUES
   (
     5,
     'george@abc.com',
-    'abc',
+    '2b$10$5ITbTbijOMvh0tpWwtMSKupRDFr/Li672NGVEFxI1Bh35d3eFE8Jy',
     'MonkeyGeorge',
     'George',
     'Maul',
@@ -30,7 +30,7 @@ VALUES
   (
     6,
     'guest@abc.com',
-    'abc',
+    '2b$10$5ITbTbijOMvh0tpWwtMSKupRDFr/Li672NGVEFxI1Bh35d3eFE8Jy',
     'na',
     'Guest',
     'Star',

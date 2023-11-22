@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt');
 // Create a new user
 app.post('/', async (req, res) => {
   try {
-    const { user_level_id, email, password, first_name, last_name, gender, line_id, fb_name } = req.body;
+    const { user_level_id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name } = req.body;
 
     // Hash the user's password before storing it
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -20,6 +20,7 @@ app.post('/', async (req, res) => {
       user_level_id,
       email,
       hashedPassword,
+      preferred_alias,
       first_name,
       last_name,
       gender,
@@ -28,7 +29,7 @@ app.post('/', async (req, res) => {
     );
     res.json(newUser);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Internal Server Error' + error.message });
   }
 });
 
@@ -61,7 +62,7 @@ app.get('/:id', async (req, res) => {
 app.put('/:id', async (req, res) => {
   try {
     const userId = parseInt(req.params.id);
-    const { email, password, first_name, last_name, gender, line_id, fb_name } = req.body;
+    const { email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name } = req.body;
 
     // Hash the updated password before storing it
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -70,6 +71,7 @@ app.put('/:id', async (req, res) => {
       userId,
       email,
       hashedPassword,
+      preferred_alias,
       first_name,
       last_name,
       gender,

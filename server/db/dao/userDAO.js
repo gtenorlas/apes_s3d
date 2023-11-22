@@ -1,11 +1,11 @@
 const db=require('../connection');
 
 // Create
-const createUser = async (user_level_id, email, password, first_name, last_name, gender, line_id, fb_name) => {
+const createUser = async (user_level_id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name) => {
   const query = {
     text:
-      'INSERT INTO users (user_level_id, email, password, first_name, last_name, gender, line_id, fb_name) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *',
-    values: [user_level_id, email, password, first_name, last_name, gender, line_id, fb_name],
+      'INSERT INTO users (user_level_id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',
+    values: [user_level_id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name],
   };
 
   const { rows } = await db.query(query);
@@ -31,11 +31,11 @@ const getUserById = async (id) => {
 };
 
 // Update
-const updateUser = async (id, email, password, first_name, last_name, gender, line_id, fb_name) => {
+const updateUser = async (id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name) => {
   const query = {
     text:
-      'UPDATE users SET email = $2, password = $3, first_name = $4, last_name = $5, gender = $6, line_id = $7, fb_name = $8, updated_at = NOW() WHERE id = $1 AND deleted_at IS NULL RETURNING *',
-    values: [id, email, password, first_name, last_name, gender, line_id, fb_name],
+      'UPDATE users SET email = $2, password = $3, preferred_aliast = $4, first_name = $5, last_name = $6, gender = $7, line_id = $8, fb_name = $9, updated_at = NOW() WHERE id = $1 AND deleted_at IS NULL RETURNING *',
+    values: [id, email, password, preferred_alias, first_name, last_name, gender, line_id, fb_name],
   };
 
   const { rows } = await db.query(query);
