@@ -1,5 +1,5 @@
 const express = require('express');
-const AnnouncementsDAO = require('../db/dao/DAO'); // Path to your AnnouncementsDAO module
+const AnnouncementsDAO = require('../db/dao/announcementsDAO'); // Path to your AnnouncementsDAO module
 const router = express.Router();
 
 // POST route to CREATE a new announcement
