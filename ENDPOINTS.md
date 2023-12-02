@@ -280,3 +280,32 @@ returned:
     "deleted_at": null
 }
 ```
+```
+
+## POST api/users/login
+description: login a user
+
+```json
+body:
+{
+    "email": "george2@abc.com",
+    "password": "abc"
+}
+
+returned:
+{
+    "id": 8,
+    "user_level_id": 5,
+    "email": "george2@abc.com",
+    "password": "$2b$10$D61Nhj6R8E.PBckOBId2y.4LI.EUFlqPvYPIwlEjYAP1hHF2uGdwG",
+    "preferred_alias": "MonkeyGeorge2",
+    "first_name": "George2",
+    "last_name": "Maul",
+    "gender": "male",
+    "line_id": null,
+    "fb_name": null,
+    "created_at": "2023-11-22T02:57:43.938Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```

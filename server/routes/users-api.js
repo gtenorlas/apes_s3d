@@ -124,8 +124,7 @@ app.post('/login', async (req, res) => {
     }
 
     // Provide a success response or generate a token for further authentication
-
-    res.json({ message: 'Login successful' });
+    res.json(user);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
   }
