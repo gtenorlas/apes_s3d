@@ -309,3 +309,122 @@ returned:
     "deleted_at": null
 }
 ```
+## GET api/groups
+description: retrieve all groups
+
+```json
+body: N/A
+
+returned:
+[
+    {
+        "id": 1,
+        "name": "APinoyEagleSquad I",
+        "description": "Main Squad",
+        "created_at": "2023-11-21T00:02:03.818Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "name": "APinoyEagleSquad II",
+        "description": "Rest and recruiting squad",
+        "created_at": "2023-11-21T00:02:03.818Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "name": "APinoyEagleSquad III",
+        "description": "Rest and recruiting squad",
+        "created_at": "2023-11-21T00:02:03.818Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "name": "APinoyEagleSquad IV",
+        "description": "Rest and recruiting squad",
+        "created_at": "2023-11-21T00:02:03.818Z",
+        "updated_at": null,
+        "deleted_at": null
+    }
+]
+```
+
+## GET api/groups/{id}
+description: retrieve a single group
+
+```json
+body: N/A
+
+returned:
+{
+    "id": 1,
+    "name": "APinoyEagleSquad I",
+    "description": "Main Squad",
+    "created_at": "2023-11-21T00:02:03.818Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## PUT api/group/{id}
+description: update a single group
+
+```json
+body:
+{
+    "id": 1,
+    "name": "APinoyEagleSquad I",
+    "description": "Main Squad. For members only."
+}
+
+returned:
+{
+    "id": 1,
+    "name": "APinoyEagleSquad I",
+    "description": "Main Squad. For members only.",
+    "created_at": "2023-11-21T00:02:03.818Z",
+    "updated_at": "2023-12-04T01:14:08.793Z",
+    "deleted_at": null
+}
+```
+
+## POST api/groups
+description: create a single group
+
+```json
+body:
+{
+    "name": "APinoyEagleSquad V",
+    "description": "Resting Squad and Account Improvement. Collect prizes"
+}
+
+returned:
+{
+    "id": 5,
+    "name": "APinoyEagleSquad V",
+    "description": "Resting Squad and Account Improvement. Collect prizes",
+    "created_at": "2023-12-04T01:16:06.156Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+## DELETE api/groups/{id}
+description: delete a single group
+
+```json
+body:
+n/a
+
+returned:
+{
+    "id": 5,
+    "name": "APinoyEagleSquad V",
+    "description": "Resting Squad and Account Improvement. Collect prizes",
+    "created_at": "2023-12-04T01:16:06.156Z",
+    "updated_at": null,
+    "deleted_at": "2023-12-04T01:17:23.246Z"
+}
+```
