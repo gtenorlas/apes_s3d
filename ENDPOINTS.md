@@ -280,8 +280,6 @@ returned:
     "deleted_at": null
 }
 ```
-```
-
 ## POST api/users/login
 description: login a user
 
@@ -426,5 +424,157 @@ returned:
     "created_at": "2023-12-04T01:16:06.156Z",
     "updated_at": null,
     "deleted_at": "2023-12-04T01:17:23.246Z"
+}
+```
+## GET api/profiles
+description: retrieve all profiles
+
+```json
+body: N/A
+
+returned:
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "group_id": 1,
+        "name": "Jacmindster 2",
+        "s3d_id": "483234nsfnkenrkr43",
+        "is_default": true,
+        "created_at": "2023-11-21T00:02:03.821Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "group_id": 2,
+        "name": "Sniperdaw",
+        "s3d_id": "483234nsfnerrereakenrkr43",
+        "is_default": false,
+        "created_at": "2023-11-21T00:02:03.821Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 3,
+        "user_id": 2,
+        "group_id": 1,
+        "name": "Cardo",
+        "s3d_id": "434383234nsfnkenrkr43",
+        "is_default": false,
+        "created_at": "2023-11-21T00:02:03.821Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 4,
+        "user_id": 3,
+        "group_id": 1,
+        "name": "Guest933",
+        "s3d_id": "4343483234nsfnkenrkr43",
+        "is_default": true,
+        "created_at": "2023-11-21T00:02:03.821Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 5,
+        "user_id": 4,
+        "group_id": 1,
+        "name": "Bye",
+        "s3d_id": "bye343483234nsfnkenrkr43",
+        "is_default": true,
+        "created_at": "2023-11-21T00:02:03.821Z",
+        "updated_at": null,
+        "deleted_at": null
+    }
+]
+```
+
+## GET api/profiles/{id}
+description: retrieve a single profile
+
+```json
+body: N/A
+
+returned:
+{
+    "id": 1,
+    "user_id": 1,
+    "group_id": 1,
+    "name": "Jacmindster 2",
+    "s3d_id": "483234nsfnkenrkr43",
+    "is_default": true,
+    "created_at": "2023-11-21T00:02:03.821Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## PUT api/profiles/{id}
+description: update a single profile
+
+```json
+body:
+{
+    "user_id": 1,
+    "group_id": 1,
+    "name": "Jacmindster 2",
+    "s3d_id": "483234nsfnkenrkr43",
+    "is_default": false
+}
+
+returned:
+{
+    "id": 1,
+    "user_id": 1,
+    "group_id": 1,
+    "name": "Jacmindster 2",
+    "s3d_id": "483234nsfnkenrkr43",
+    "is_default": false,
+    "created_at": "2023-11-21T00:02:03.821Z",
+    "updated_at": "2023-12-05T01:20:30.853Z",
+    "deleted_at": null
+}
+```
+
+## POST api/profiles
+description: create a single profile
+
+```json
+body:
+{
+    "user_id": 1,
+    "group_id": 1,
+    "name": "Jacmindster 4",
+    "s3d_id": "483234nsfnkenrkererer43",
+    "is_default": true
+}
+
+returned:
+{
+    "id": 6,
+    "user_id": 1,
+    "group_id": 1,
+    "name": "Jacmindster 4",
+    "s3d_id": "483234nsfnkenrkererer43",
+    "is_default": true,
+    "created_at": "2023-12-05T01:21:34.879Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## DELETE api/profile/{id}
+description: delete a single profile
+
+```json
+body:
+n/a
+
+returned:
+{
+    "message": "Profile deleted"
 }
 ```
