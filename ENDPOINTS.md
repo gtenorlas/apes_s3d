@@ -578,3 +578,129 @@ returned:
     "message": "Profile deleted"
 }
 ```
+## GET api/wars
+description: retrieve all wars
+
+```json
+body: N/A
+
+returned:
+[
+    {
+        "id": 1,
+        "group_id": 1,
+        "start_date": "2023-02-01T05:00:00.000Z",
+        "end_date": "2023-02-02T05:00:00.000Z",
+        "number_of_days": 1,
+        "month": 2,
+        "thumbnail": "Squad1_02022023",
+        "created_at": "2023-11-21T00:02:03.824Z",
+        "updated_at": null,
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "group_id": 1,
+        "start_date": "2023-02-02T05:00:00.000Z",
+        "end_date": "2023-02-04T05:00:00.000Z",
+        "number_of_days": 2,
+        "month": 2,
+        "thumbnail": "Squad1_02042023",
+        "created_at": "2023-11-21T00:02:03.824Z",
+        "updated_at": null,
+        "deleted_at": null
+    }
+]
+```
+
+## GET api/wars/{id}
+description: retrieve a single war
+
+```json
+body: N/A
+
+returned:
+{
+    "id": 1,
+    "group_id": 1,
+    "start_date": "2023-02-01T05:00:00.000Z",
+    "end_date": "2023-02-02T05:00:00.000Z",
+    "number_of_days": 1,
+    "month": 2,
+    "thumbnail": "Squad1_02022023",
+    "created_at": "2023-11-21T00:02:03.824Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## PUT api/wars/{id}
+description: update a single war
+
+```json
+body:
+{
+    "group_id": 1,
+    "start_date": "2023-02-01T05:00:00.000Z",
+    "end_date": "2023-02-02T05:00:00.000Z",
+    "number_of_days": 1,
+    "month": 2,
+    "thumbnail": "Squad2_02022023"
+}
+
+returned:
+{
+    "id": 1,
+    "group_id": 1,
+    "start_date": "2023-02-01T05:00:00.000Z",
+    "end_date": "2023-02-02T05:00:00.000Z",
+    "number_of_days": 1,
+    "month": 2,
+    "thumbnail": "Squad2_02022023",
+    "created_at": "2023-11-21T00:02:03.824Z",
+    "updated_at": "2023-12-06T01:27:17.909Z",
+    "deleted_at": null
+}
+```
+
+## POST api/wars
+description: create a single war
+
+```json
+body:
+{
+    "group_id": 1,
+    "start_date": "2023-02-01T05:00:00.000Z",
+    "end_date": "2023-02-03T05:00:00.000Z",
+    "number_of_days": 2,
+    "month": 2,
+    "thumbnail": "Squad1_02022023"
+}
+
+returned:
+{
+    "id": 3,
+    "group_id": 1,
+    "start_date": "2023-02-01T05:00:00.000Z",
+    "end_date": "2023-02-03T05:00:00.000Z",
+    "number_of_days": 2,
+    "month": 2,
+    "thumbnail": "Squad1_02022023",
+    "created_at": "2023-12-06T01:28:41.685Z",
+    "updated_at": null,
+    "deleted_at": null
+}
+```
+
+## DELETE api/wars/{id}
+description: delete a single war
+
+```json
+body:
+n/a
+
+returned:
+{
+    "message": "War deleted"
+}
+```
